@@ -1,0 +1,152 @@
+l=[1,2,3,4,5,6,7,8,9,10]
+o=[]
+e=[]
+for i in l:
+    if i%2==0:
+        e.append(i)
+    else:
+        o.append(i)
+oo=[x**2 for x in o]
+ee=[x**2 for x in e]
+print("odd list",o)
+print("\neven list",e)
+print("\neven list square",ee)
+print("\nodd list square",oo)
+******************************************************
+
+l=[]
+a=int(input("enter size of list"))
+for i in range(a):
+  n=int(input("enter the value"))
+  l.append(n)
+l.sort()
+print("the smalles number is ",l[0])
+print("the largest number is ",l[-1])
+
+*****************************************************************************
+
+
+l=[]
+a=int(input("enter size of list"))
+for i in range(a):
+  n=int(input("enter the value"))
+  l.append(n)
+l.sort()
+print("the smalles number is ",l[0])
+print("the largest number is ",l[-1])
+
+******************************************************
+
+def _ascending(nums):
+  for i in range(len(nums)):
+    for j in range(0, len(nums) - i - 1):
+      if nums[j] > nums[j + 1]:
+        nums[j], nums[j + 1] = nums[j + 1], nums[j]
+  return nums
+
+def _descending(nums):
+  for i in range(len(nums)):
+    for j in range(0, len(nums) - i - 1):
+      if nums[j] < nums[j + 1]:
+        nums[j], nums[j + 1] = nums[j + 1], nums[j]
+  return nums
+  nums=[5,6,7,8,9,10,45,325]
+  print(_ascending(nums))
+  print(_descending(nums))
+
+*************************************************************
+l=[1,45,67,89,564,657,23]
+a=int(input("enter the element to be found:"))
+for i in range(len(l)):
+  if a==l[i]:
+    print("the element is found in index",i)
+******************************************
+
+
+from collections import Counter
+
+a = [4, 5, 6, 4, 6, 7, 4, 2, 4, 8, 4]
+frequency = Counter(a)
+most_frequent_element = frequency.most_common(1)[0][0]
+
+print("The most frequent element is:", most_frequent_element)
+********************************************************
+
+keys = ["ten","twenty","thirty"]
+values = [10, 20, 30]
+
+dic = dict(zip(keys, values))
+print(dic)
+***********************************************************
+
+print("A B C")
+l=["hari_karthick","giri","dhivyakanth","tharun","narendra","lokesh","loki","dinesh","hari","gowtham"]
+print("to vote virat press 1:")
+print("to vote rohit press 2:")
+print("to vote dhoni press 3:")
+print("to vote nota press 4:")
+v=0
+r=0
+d=0
+n=0
+for i in l:
+    print(i,"enter your option")
+    a=int(input(""))
+    match(a):
+        case 1:
+            v=v+1
+        case 2:
+            r=r+1
+        case 3:
+            d=d+1
+        case 4:
+            n=n+1
+if(v>r and v>d and v>n ):
+    print("A is the winner")
+elif(r>v and r>d and r>n):
+    print("B is winner")
+elif(d>v and d>r and d>n):
+    print("C is winner")
+else:
+    print("the nota is the lead")
+
+*****************************************************************
+
+def rupee_to_dollar(rupees):
+  dollars = rupees*83.45
+  return dollars
+def celsius_to_fahrenheit(celsius):
+  fahrenheit = (celsius * 9/5) + 32
+  return fahrenheit
+def bmi_calculation(weight, height):
+  bmi = weight / (height * height)
+  return bmi
+def simple_interest(principal, rate, time):
+  interest = (principal * rate * time) / 100
+  return interest
+amount = float(input("Enter the amount in Rupees: "))
+temperature = float(input("Enter the temperature in Celsius: "))
+weight = float(input("Enter your weight in kg: "))
+height = float(input("Enter your height in meters: "))
+principal = float(input("Enter the principal amount: "))
+rate = float(input("Enter the rate of interest: "))
+time = float(input("Enter the time period in years: "))
+dollars = rupee_to_dollar(amount)
+print(f"{amount}, Rupees is equal to ,{dollars:.2f}, Dollars")
+fahrenheit = celsius_to_fahrenheit(temperature)
+print(f"{temperature} Celsius is equal to {fahrenheit:.2f} Fahrenheit")
+bmi = bmi_calculation(weight, height)
+print(f"Your BMI is {bmi:.2f}")
+interest = simple_interest(principal, rate, time)
+print(f"The simple interest is {interest:.2f}")
+
+********************************************************************
+l=[0,1,0,1,1,0,1,0,1,0]
+zero=[]
+one=[]
+for i in l:
+  if i==0:
+    zero.append(i)
+  else:
+    one.append(i)
+print(zero+one)
